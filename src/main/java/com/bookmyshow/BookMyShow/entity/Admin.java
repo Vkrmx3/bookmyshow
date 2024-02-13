@@ -7,25 +7,25 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
-import jakarta.persistence.OneToOne;
 import lombok.Getter;
 import lombok.Setter;
 
 @Entity
 @Getter
 @Setter
-public class User {
+public class Admin {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int userId;
-	private String userName;
-	private String userEmail;
-	private String userPassword;
-	
-	@OneToOne
-	private Cart cart;
+	private int adminId;
+	private String adminName;
+	private String adminEmail;
+	private String adminPassword;
 	
 	@OneToMany
-	private List<Tickets> tickets;
+	private List<TheatreAdmin> theatreAdmin;
+	@OneToMany
+	private List<User> user;
+	@OneToMany
+	private List<Movies> movies;
 }

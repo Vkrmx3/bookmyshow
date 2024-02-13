@@ -1,13 +1,13 @@
-package com.booking.bookmyshow;
+package com.bookmyshow.BookMyShow;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class BookmyshowApplication {
+public class BookMyShowApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(BookmyshowApplication.class, args);
+		SpringApplication.run(BookMyShowApplication.class, args);
 	}
 
 }

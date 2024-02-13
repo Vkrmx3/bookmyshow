@@ -7,20 +7,24 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
+import jakarta.persistence.OneToOne;
 import lombok.Getter;
 import lombok.Setter;
 
 @Entity
 @Getter
 @Setter
-public class Tickets {
+public class Screen {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int theatreId;
-	private String theatreName;
-	@OneToMany
-	private List<Screen> screen;
-	@OneToMany
+	private int screenId;
+	private String screenName;
+	
+	@OneToOne
 	private List<Movies> movies;
+	@OneToMany
+	private List<Seats> seats;
+	@OneToOne
+	private List<Theatre> theatre;
 }
