@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookMyShow</title>
+    <link rel="shortcut icon" href="../icon/myshow.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/index.css">
+    <style>
+        .carousel-control-prev-icon{
+           background-color:  black !important;
+           
+        }
+    </style>
+  
+</head>
+<body>
+         
+    <div id="main-container">
+        
+        <div id="head-container">
+            <header id="head">
+                <div id="title">
+                 
+                </div>
+                <div id="search">
+                     <div id="searchmenu"><i class="fa-solid fa-magnifying-glass"></i> 
+                       <input type="search" name="loc" placeholder="Search for Movies, Events, Plays, Sports and Activities" id="area">
+                    </div>
+                </div>
+                <div id="right-menu">
+                    <div id="location">
+                          Chennai<i class="fa-solid fa-angle-down"></i>
+                    </div>
+                    <div id="signup">
+
+                            <a id="link" href="#">sign in</a>
+                    </div>
+                    
+                </div>
+                <div id="menu">
+                    <i class="fa-solid fa-bars" onclick="sidebar()"></i>
+                </div>
+
+                
+                
+            </header>
+        </div>
+    </div>
+   
+    <div id="side-bar">
+        <div id="side-menu">
+            <h2>Hey!</h2>
+            <a class="side-bar-link" href="#">Login</a>
+            <a class="side-bar-link" href="#">signup</a>
+            <br>
+            <br>
+            <br>
+            <div id="side1">
+                <div id="cart">
+                    <h4 style="display: inline;">Your Cart <i class="fa-solid fa-cart-shopping"></i></h4>
+                    <i class="fa-solid fa-angle-right"></i>
+               </div>
+                <div id="top-one">
+                    <h4 style="display: inline;">Notification</h4>
+                    <i class="fa-solid fa-angle-right"></i>
+               </div>
+               <div id="reward">
+                <h4 style="display: inline;">Rewards <i class="fa-solid fa-gift"></i></h4>
+                <i class="fa-solid fa-angle-right"></i>  
+               </div>
+               <div id="bottom-one">
+                <h4 style="display: inline;">Help & Support <i class="fa-solid fa-angle-right"></i></h4>
+                    <i class="fa-solid fa-angle-right"></i>
+                   
+           </div>
+            </div>
+           
+        </div>
+      
+
+    </div>
+       
+        <!--carusel Page-->
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="../image/bookmyshow.webp" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>First slide label</h5>
+                  <p>Some representative placeholder content for the first slide.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="../image/bookmyshow.webp" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Second slide label</h5>
+                  <p>Some representative placeholder content for the second slide.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="../image/bookmyshow.webp" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Third slide label</h5>
+                  <p>Some representative placeholder content for the third slide.</p>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+    <script src="https://kit.fontawesome.com/4080ed022e.js" crossorigin="anonymous"></script>
+    <script src="../js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

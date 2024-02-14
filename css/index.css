@@ -1,0 +1,256 @@
+/* CSS */
+body {
+    margin: 0;
+}
+
+#main-container {
+    border: 1px solid black;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#head-container {
+    border: 1px solid black;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+}
+
+#head {
+    border: 1px solid black;
+    height: 100%;
+    width: 90%;
+    display: flex;
+}
+
+#title {
+    background-image: url("../image/bookmyshow.webp");
+    height: 100%;
+    width: 13%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: Roboto, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#search {
+    border: 1px solid black;
+    height: 100%;
+    width: 65%;
+    display: flex;
+    align-items: center;
+}
+
+#searchmenu {
+    border: 1px solid rgb(209, 200, 200);
+    height: 35px;
+    border-radius: 5px;
+    width: 600px;
+    font-size: 25px;
+    color: rgb(95, 96, 97);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#area {
+    width: 90%;
+    height: 100%;
+    border: none;
+}
+
+#area:focus {
+    border: none;
+    outline: none;
+}
+
+#area::placeholder {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 15px;
+}
+
+#right-menu {
+    height: 100%;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#location {
+    border: 1px solid black;
+    width: 50%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    justify-content: center;
+}
+
+#location i {
+    margin-top: 5px;
+    margin-left: 10px;
+    color: rgb(83, 80, 80);
+}
+
+#signup {
+    border: 1px solid black;
+    width: 50%;
+    height: 50%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#link {
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    background-color: rgb(248, 68, 100);
+    padding: 6px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#menu {
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 50px;
+    color: rgb(78, 76, 76);
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#menu i {
+    cursor: pointer;
+}
+
+#side-bar {
+    border: 1px solid black;
+    width: 130%;
+    overflow-x: auto;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 97vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    transition: 600ms;
+}
+
+#side-menu {
+    height: 100%;
+    width: 23%;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(51, 50, 50);
+    transform: translateX(-100%);
+    transition: 800ms;
+    transition-timing-function: linear;
+    text-align: center;
+}
+
+#side-menu h2 {
+    padding-bottom: 20px;
+    border-bottom: 1px rgb(235, 219, 219);
+}
+
+.side-bar-link {
+    padding: 15px 25px;
+    color: white;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(248, 68, 100);
+    margin: 20px;
+    border-radius: 8px;
+}
+
+#side1 {
+    position: relative;
+    top: 0px;
+    height: 200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#cart {
+    height: 25%;
+    position: relative;
+    border: 1px solid rgb(150, 136, 136);
+    border-left: none;
+    border-right: none;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-bottom: none;
+    text-align: left;
+}
+
+#bottom-one {
+    height: 25%;
+    position: relative;
+    border: 1px solid rgb(150, 136, 136);
+    border-left: none;
+    border-right: none;
+    width: 100%;
+    border-top: none;
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+#reward {
+    height: 25%;
+    position: relative;
+    border: 1px solid rgb(150, 136, 136);
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
+
+#top-one {
+    height: 25%;
+    position: relative;
+    width: 100%;
+    border: 1px solid rgb(150, 136, 136);
+    border-left: none;
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
+
+#side1>div>i {
+    position: absolute;
+    right: 0px;
+}
+
+#side1 div:hover {
+    transform: scale(1.03);
+    font-size: 16px;
+    transition: 300ms;
+    background-color: white;
+    cursor: pointer;
+}
+
+.side-bar-link:hover {
+    background-color: rgb(46, 43, 43);
+}
