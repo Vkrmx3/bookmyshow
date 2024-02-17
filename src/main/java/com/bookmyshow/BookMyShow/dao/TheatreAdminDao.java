@@ -12,41 +12,38 @@ public class TheatreAdminDao {
 
 	@Autowired
 	TheatreAdminRepo taRepo;
-	
+
 	public TheatreAdmin saveTheatreAdmin(TheatreAdmin theatreAdmin) {
 		return taRepo.save(theatreAdmin);
 	}
-	
+
 	public TheatreAdmin findTheatreAdmin(int theatreAdminId) {
 		Optional<TheatreAdmin> opTheatreAdmin = taRepo.findById(theatreAdminId);
-		if(opTheatreAdmin.isPresent()) {
+		if (opTheatreAdmin.isPresent()) {
 			return opTheatreAdmin.get();
 		}
 		return null;
 	}
-	
-	
+
 	public TheatreAdmin deleteTheatreAdmin(int theatreAdminId) {
 		TheatreAdmin theatreAdmin = findTheatreAdmin(theatreAdminId);
-		if(theatreAdmin != null) {
+		if (theatreAdmin != null) {
 			taRepo.delete(theatreAdmin);
 			return theatreAdmin;
 		}
 		return null;
 	}
-	
-	
+
 	public TheatreAdmin updateTheatreAdmin(TheatreAdmin theatreAdmin, int theatreAdminId) {
 		TheatreAdmin exiTheatreAdmin = findTheatreAdmin(theatreAdminId);
-		if(exiTheatreAdmin!=null) {
+		if (exiTheatreAdmin != null) {
 			theatreAdmin.setTheatreAdminId(theatreAdminId);
 			return taRepo.save(theatreAdmin);
 		}
 		return null;
 	}
-	
-	
-	public List<TheatreAdmin> getAllTheatreAdmin() {
+
+	public List<TheatreAdmin> getAllTheatreAdmins() {
 		return taRepo.findAll();
 	}
 }

@@ -12,42 +12,39 @@ public class UserDao {
 
 	@Autowired
 	UserRepo uRepo;
-	
+
 	public User saveUser(User user) {
 		return uRepo.save(user);
 	}
-	
+
 	public User findUser(int userId) {
 		Optional<User> opUser = uRepo.findById(userId);
-		if(opUser.isPresent()) {
+		if (opUser.isPresent()) {
 			return opUser.get();
 		}
 		return null;
 	}
-	
-	
+
 	public User deleteUser(int userId) {
 		User user = findUser(userId);
-		if(user != null) {
+		if (user != null) {
 			uRepo.delete(user);
 			return user;
 		}
 		return null;
 	}
-	
-	
+
 	public User updateUser(User user, int userId) {
 		User exiUser = findUser(userId);
-		if(exiUser!=null) {
+		if (exiUser != null) {
 			user.setUserId(userId);
 			return uRepo.save(user);
 		}
 		return null;
 	}
-	
-	
-	public List<User> getAllUser() {
+
+	public List<User> getAllUsers() {
 		return uRepo.findAll();
 	}
-	
+
 }

@@ -14,41 +14,38 @@ public class TheatreDao {
 
 	@Autowired
 	TheatreRepo tRepo;
-	
+
 	public Theatre saveTheatre(Theatre theatre) {
 		return tRepo.save(theatre);
 	}
-	
+
 	public Theatre findTheatre(int theatreId) {
 		Optional<Theatre> opTheatre = tRepo.findById(theatreId);
-		if(opTheatre.isPresent()) {
+		if (opTheatre.isPresent()) {
 			return opTheatre.get();
 		}
 		return null;
 	}
-	
-	
+
 	public Theatre deleteTheatre(int theatreId) {
 		Theatre theatre = findTheatre(theatreId);
-		if(theatre != null) {
+		if (theatre != null) {
 			tRepo.delete(theatre);
 			return theatre;
 		}
 		return null;
 	}
-	
-	
+
 	public Theatre updateTheatre(Theatre theatre, int theatreId) {
 		Theatre exiTheatre = findTheatre(theatreId);
-		if(exiTheatre!=null) {
+		if (exiTheatre != null) {
 			theatre.setTheatreId(theatreId);
 			return tRepo.save(theatre);
 		}
 		return null;
 	}
-	
-	
-	public List<Theatre> getAllTheatre() {
+
+	public List<Theatre> getAllTheatres() {
 		return tRepo.findAll();
 	}
 }

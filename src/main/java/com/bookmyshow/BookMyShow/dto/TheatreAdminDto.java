@@ -14,6 +14,6 @@ public class TheatreAdminDto {
 	private int theatreAdminId;
 	private String theatreAdminName;
 	private String theatreAdminEmail;
-	
+
 	private List<Theatre> theatre;
 }

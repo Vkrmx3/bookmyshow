@@ -2,7 +2,7 @@ package com.bookmyshow.BookMyShow.dto;
 
 import java.util.List;
 
-import com.bookmyshow.BookMyShow.entity.Movies;
+import com.bookmyshow.BookMyShow.entity.Movie;
 import com.bookmyshow.BookMyShow.entity.TheatreAdmin;
 import com.bookmyshow.BookMyShow.entity.User;
 
@@ -16,8 +16,8 @@ public class AdminDto {
 	private int adminId;
 	private String adminName;
 	private String adminEmail;
-	
+
 	private List<TheatreAdmin> theatreAdmin;
 	private List<User> user;
-	private List<Movies> movies;
+	private List<Movie> movie;
 }

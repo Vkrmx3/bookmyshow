@@ -14,41 +14,38 @@ public class ScreenDao {
 
 	@Autowired
 	ScreenRepo scRepo;
-	
+
 	public Screen saveScreen(Screen screen) {
 		return scRepo.save(screen);
 	}
-	
+
 	public Screen findScreen(int screenId) {
 		Optional<Screen> opScreen = scRepo.findById(screenId);
-		if(opScreen.isPresent()) {
+		if (opScreen.isPresent()) {
 			return opScreen.get();
 		}
 		return null;
 	}
-	
-	
+
 	public Screen deleteScreen(int screenId) {
 		Screen screen = findScreen(screenId);
-		if(screen != null) {
+		if (screen != null) {
 			scRepo.delete(screen);
 			return screen;
 		}
 		return null;
 	}
-	
-	
+
 	public Screen updateScreen(Screen screen, int screenId) {
 		Screen exiScreen = findScreen(screenId);
-		if(exiScreen!=null) {
+		if (exiScreen != null) {
 			screen.setScreenId(screenId);
 			return scRepo.save(screen);
 		}
 		return null;
 	}
-	
-	
-	public List<Screen> getAllScreen() {
+
+	public List<Screen> getAllScreens() {
 		return scRepo.findAll();
 	}
 }

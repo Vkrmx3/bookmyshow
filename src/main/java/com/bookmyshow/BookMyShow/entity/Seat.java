@@ -1,14 +1,13 @@
 package com.bookmyshow.BookMyShow.entity;
 
-import java.util.List;
-
 import org.springframework.stereotype.Component;
+
+import com.bookmyshow.BookMyShow.dto.SeatType;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -16,13 +15,14 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Cart {
+public class Seat {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int cartId;
-	@OneToMany
-	private List<Ticket> ticket;
-	private double totalCost;
-//	private String status;
+	private int seatId;
+	private SeatType seatType;
+	private double seatCost;
+	public static final double seatCostSilver = 50;
+	public static final double seatCostGold = 70;
+	public static final double seatCostPlatinum = 90;
 }

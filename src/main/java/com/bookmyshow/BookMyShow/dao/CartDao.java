@@ -14,41 +14,38 @@ public class CartDao {
 
 	@Autowired
 	CartRepo cRepo;
-	
+
 	public Cart saveCart(Cart cart) {
 		return cRepo.save(cart);
 	}
-	
+
 	public Cart findCart(int cartId) {
 		Optional<Cart> opCart = cRepo.findById(cartId);
-		if(opCart.isPresent()) {
+		if (opCart.isPresent()) {
 			return opCart.get();
 		}
 		return null;
 	}
-	
-	
+
 	public Cart deleteCart(int cartId) {
 		Cart cart = findCart(cartId);
-		if(cart != null) {
+		if (cart != null) {
 			cRepo.delete(cart);
 			return cart;
 		}
 		return null;
 	}
-	
-	
+
 	public Cart updateCart(Cart cart, int cartId) {
 		Cart exiCart = findCart(cartId);
-		if(exiCart!=null) {
+		if (exiCart != null) {
 			cart.setCartId(cartId);
 			return cRepo.save(cart);
 		}
 		return null;
 	}
-	
-	
-	public List<Cart> getAllCart() {
+
+	public List<Cart> getAllCarts() {
 		return cRepo.findAll();
 	}
 }
