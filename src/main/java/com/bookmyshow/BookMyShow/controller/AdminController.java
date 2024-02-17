@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -17,6 +18,8 @@ import com.bookmyshow.BookMyShow.exceptionHandling.AdminNotFound;
 import com.bookmyshow.BookMyShow.service.AdminService;
 import com.bookmyshow.BookMyShow.util.ResponseStructure;
 
+import jakarta.validation.Valid;
+
 @RestController
 @RequestMapping("BmsAdmin")
 public class AdminController {
@@ -24,7 +27,7 @@ public class AdminController {
 AdminService service;
 	
 	@PostMapping("save")
-	public ResponseEntity<ResponseStructure<AdminDto>> saveAdmin(Admin admin){
+	public ResponseEntity<ResponseStructure<AdminDto>> saveAdmin(@Valid Admin admin, BindingResult result){
 		return service.saveAdmin(admin);
 	}
 	
@@ -40,7 +43,7 @@ AdminService service;
 	}
 	
 	@PutMapping("update")
-	public ResponseEntity<ResponseStructure<AdminDto>> updateAdmin(Admin admin, int adminId) throws AdminNotFound {
+	public ResponseEntity<ResponseStructure<AdminDto>> updateAdmin(@Valid Admin admin, BindingResult result, int adminId) throws AdminNotFound {
 	return service.updateAdmin(admin, adminId);
 	}
 	
